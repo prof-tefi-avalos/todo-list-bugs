@@ -33,6 +33,7 @@ npm run dev
 ```
 ---
 ## Funcionalidad
+Debe inicializar en la lista de tareas
 Crear un todo
 Marcar un todo como completado / pendiente
 Eliminar un todo

@@ -34,8 +34,13 @@ npm run dev
 ---
 ## Funcionalidad
 Debe inicializar en la lista de tareas
+
 Crear un todo
+
 Marcar un todo como completado / pendiente
+
 Eliminar un todo
+
 Cambiar entre modo oscuro y claro
+
 Navegación entre lista de todos y formulario usando conditional rendering

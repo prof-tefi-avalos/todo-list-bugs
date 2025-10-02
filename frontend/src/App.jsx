@@ -16,13 +16,13 @@ const Container = styled.div`
 
 function App() {
   const [todos, setTodos] = useState([]);
-  const [page, setPage] = useState("form");
+  const [page, setPage] = useState("list");
   const [darkMode, setDarkMode] = useState(false); // estado de modo oscuro
 
   const todosMemo = useMemo(() => todos, [todos]); // memorizo todos
-console.log(todos)
+
   useEffect(() => {
-    fetch("http://localhost:4000/todo")
+    fetch("http://localhost:4000/todos")
       .then(res => res.json())
       .then(data => setTodos(data));
   }, []);
@@ -38,12 +38,13 @@ console.log(todos)
   }, []);
 
   const toggleTodo = useCallback((id) => {
-    // Esto cambia el estado de un todo: hago un PUT al backend para "marcarlo hecho/no hecho" (ver como está aplicado al back, perosolo solucionarlo acá)
+    // Esto cambia el estado de un todo: hago un PUT al backend para "marcarlo hecho/no hecho" 
+    // (ver como está aplicado al back, perosolo solucionarlo acá)
     // y después actualizo la lista local reemplazando solo el todo que cambió.
     fetch(`http://localhost:4000/todos/${id}`, { method: "PUT" })
       .then(res => res.json())
       //acá el updated es el objeto actualizado dspues del put
-      .then(updated => setTodos(prev => prev.map(t => t.id === id ? t : t)));
+      .then(taskUpdated => setTodos(estadoPrevio => taskUpdated.map(task => estadoPrevio.id === id ? updated : task)));
   }, []);
 
   const deleteTodo = useCallback((id) => {

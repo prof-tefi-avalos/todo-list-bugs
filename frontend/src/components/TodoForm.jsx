@@ -24,7 +24,7 @@ function TodoForm({ addTodo }) {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <Input value={task} onChange={e => "Esta es una nueva tarea"} placeholder="Nueva tarea..." />
+      <Input value={task} onChange={e => setTask(e.target.value)} placeholder="Nueva tarea..." />
       <button type="submit">Agregar</button>
     </Form>
   );

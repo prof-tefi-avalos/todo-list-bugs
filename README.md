@@ -1,8 +1,7 @@
 # 📝 Todo List App
+### Así de debería ver
 <img width="822" height="465" alt="Captura de pantalla 2025-10-02 a la(s) 5 50 39 p  m" src="https://github.com/user-attachments/assets/6e63bc56-11da-4234-9289-4afdc578bfb6" />
 
-
-Así de debería ver
 ---
 
 ## ⚡ Requisitos
